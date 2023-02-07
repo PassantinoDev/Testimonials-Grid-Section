@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Barlow Semi Condensed', sans-serif;;
+
+}
+
+body{
+    display: grid;
+    place-items: center;
+    width: auto;
+}
+
+
+
+/* Grid display */
+main{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2.5rem;
+    margin-inline: auto;
+    
+    background-color: hsl(210, 46%, 95%);
+    padding: 10rem;
+    
+    
+}
+
+.grid-col-span-2{
+    grid-column: span 2;
+}
+.card:last-child{
+    grid-column-start: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    /* SHORT HAND */
+    grid-row: 1 / 3;
+}
+
+/* Grid display */
+
+
+
+
+/* Card design */
+.card{
+    display:flex;
+    flex-direction: column;
+    border-radius: 15px;
+    padding:1rem;
+    transition: transform;
+    box-shadow: 2px 2px 13px;
+    width: min(95%, 70rem);
+}
+
+.card-heading{
+    color: #fff;
+    opacity: 90%;
+    font-size: 11px;
+    font-weight: 600;
+}
+.card-head{
+    display: flex;
+    flex-direction: row;
+}
+.name{
+    margin-top:.5rem;
+    color:#fff;
+    font-size: 18px;
+    
+}
+.details{
+    color:#fff;
+    margin-top: 1.5rem;
+    opacity: 0.5;
+    font-size: 11px;
+    line-height: 1.8rem;
+    font-weight: 400;
+}
+/* Card design */
+
+
+
+
+/* Card zoom */
+.card:hover{
+    transform: scale(1.1);
+    transition:  .3s;
+}
+.card-3:hover{
+    transform: scale(1.1);
+    transition:  .3s;
+
+}
+/* Card-Zoom */
+
+
+
+
+/* Card 1 design */
+.card-1{
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-color: hsl(263, 
+    55%, 52%);
+    background-repeat: no-repeat;
+    background-position: 80% 0;
+    margin-inline: auto;
+}
+/* Card 1 design */
+
+
+
+
+/* Card 2 design */
+.card-2{
+    background-color: hsl(217, 19%, 35%);}
+/* Car 2 design */
+
+
+
+
+/* Card 3 design */
+.card-3{
+    background-color: white;
+    color:hsl(217, 19%, 35%); 
+    margin-inline: 1.1rem;
+}
+
+.card-3 .card-heading{
+   color: hsl(217, 19%, 35%);
+}
+
+.card-3 .name>h4{
+color: hsl(217, 19%, 35%);
+opacity: 70%;
+}
+
+.card-3 .details{
+    color:  hsl(217, 19%, 35%);
+}
+
+.card-3 .name>span{
+    color:hsl(217, 19%, 35%);
+    opacity: 50%;
+    
+}
+.card-3 .card-head>img{
+    border: 3px solid hsl(217, 19%, 35%);
+}
+/* Card 3 design */
+
+
+
+
+/* Card 4 design */
+.card-4{
+    background-color:  hsl(219, 29%, 14%);
+    margin-inline: auto;
+    
+}
+.card-4 .card-head>img{
+    border: 3px solid hsl(263, 55%, 52%) !important;
+}
+/* Card 4 design */
+
+
+
+
+/* Card 5 design */
+.card-5{
+    background-color: white;
+    color:hsl(217, 19%, 35%); 
+}
+
+.card-5 .card-heading{
+   color: hsl(217, 19%, 35%);
+}
+
+.card-5 .name>h4{
+color: hsl(217, 19%, 35%);
+}
+
+.card-5 .details{
+    color:  hsl(217, 19%, 35%);
+}
+
+.card-5 .name>span{
+    color:hsl(217, 19%, 35%);
+}
+.card-5 .card-head>img{
+    border: 3px solid hsl(217, 19%, 35%);
+}
+/* Card 5 design */
+
+
+
+
+/* Typography */
+.name>p{
+    font-weight: 600;
+    font-size: 13px;
+}
+.name>span{
+    font-size: 13px;
+}
+.card-head>img{
+    border: 3px #fff solid;
+    border-radius: 50%;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+span{
+    opacity: 50%;
+}
+p{
+    opacity: 80%;
+}
+/* Typography */
+
+
+
+
+/* Media queries */
+
+@media (max-width: 1200px) {
+    body{
+        display: grid;
+        flex-direction: column;
+        place-items: center
+        ;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .card{
+        width: 100%
+    }
+    .grid-col-span-2{
+        grid-column: 2;
+    }
+    .card:last-child{
+        grid-column-start: 4;
+        grid-row: 1 / span 2;
+    }
+}
+
+@media (max-width: 420px) {
+    body{
+        display: grid;
+        flex-direction: column;
+        place-items: center
+        ;
+
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 1em;
+        
+    }
+    .card{
+        width:100%;
+    }
+
+}
+
+
+
+
+/* Media queries */
